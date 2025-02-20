@@ -10,7 +10,7 @@ app = FastAPI()
 def fetch_data(year: int = None, country: str = None, market: str = None):
     try:
         # Load CSV content into a pandas DataFrame
-        df = pd.read_csv("https://mynewbucktforrealtime.s3.ap-south-1.amazonaws.com/total_data.csv")
+        df = pd.read_csv("https://finrealtime-bucket1.s3.us-east-2.amazonaws.com/total_data.csv")
         print(df.shape[0])
         # Apply filters based on provided parameters
         if year is not None:
